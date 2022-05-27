@@ -1,4 +1,4 @@
-package main;
+package main.fileOperations;
 
 import java.io.File;
 import java.io.IOException;

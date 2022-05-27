@@ -1,9 +1,6 @@
 package main;
 
-import main.fileOperations.ListAllFiles;
-import main.fileOperations.PrintFromFile;
-import main.fileOperations.ReadFile;
-import main.fileOperations.WriteToFile;
+import main.fileOperations.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;

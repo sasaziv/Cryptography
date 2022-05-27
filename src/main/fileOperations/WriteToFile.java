@@ -1,7 +1,5 @@
 package main.fileOperations;
 
-import main.CreateFile;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
