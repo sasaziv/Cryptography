@@ -1,12 +1,14 @@
 package main;
 
-public class LanguageRules {
-    //TO DO
+import java.util.List;
 
-    String languageName;
+public interface LanguageRules {
 
-    public LanguageRules(String languageName) {
-        this.languageName = languageName;
-    }
+    List<Character> getAllCharacters();
+
+    double testLanguageRules();
+
+    double bruteForce(String string);
+
 
 }

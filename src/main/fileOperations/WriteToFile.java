@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-public abstract class WriteToFile {
+public class WriteToFile {
 
     public static void writeAll(List<String> lines, String filePath) {
         filePath = "files/" + filePath;
