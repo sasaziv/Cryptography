@@ -9,6 +9,6 @@ public interface LanguageRules {
     double testLanguageRules();
 
     double bruteForce(String string);
-
+    double bruteForce(List<String> string);
 
 }
