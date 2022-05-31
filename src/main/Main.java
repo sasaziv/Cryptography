@@ -38,11 +38,21 @@ public class Main {
                 } else if (numberPick == 3) {
                     System.out.println("Enter file name:");
                     String fileName = bufferedReader.readLine();
-                    PrintFromFile.printAll(fileName);
+                    if (ListAllFiles.fileExist(fileName)) {
+                        PrintFromFile.printAll(fileName);
+                    } else {
+                        System.out.println("File doesn't exist!");
+                        continue;
+                    }
                 } else if (numberPick == 4) {
                     System.out.println("Enter file name:");
                     String fileName = bufferedReader.readLine();
-                    lines = ReadFile.readFromFile(fileName);
+                    if (ListAllFiles.fileExist(fileName)) {
+                        lines = ReadFile.readFromFile(fileName);
+                    } else {
+                        System.out.println("File doesn't exist!");
+                        continue;
+                    }
                     System.out.println("Enter number to shift:");
                     int numberToShift = Integer.parseInt(bufferedReader.readLine().trim());
                     CaesarCipher caesarCipher = new CaesarCipher(numberToShift, languageRules);
@@ -53,7 +63,12 @@ public class Main {
                 } else if (numberPick == 5) {
                     System.out.println("Enter file name:");
                     String fileName = bufferedReader.readLine();
-                    lines = ReadFile.readFromFile(fileName);
+                    if (ListAllFiles.fileExist(fileName)) {
+                        lines = ReadFile.readFromFile(fileName);
+                    } else {
+                        System.out.println("File doesn't exist!");
+                        continue;
+                    }
                     System.out.println("Enter number to shift:");
                     int numberToShift = Integer.parseInt(bufferedReader.readLine().trim());
                     CaesarCipher caesarCipher = new CaesarCipher(numberToShift, languageRules);
@@ -64,7 +79,12 @@ public class Main {
                 } else if (numberPick == 6) {
                     System.out.println("Enter file name:");
                     String fileName = bufferedReader.readLine();
-                    lines = ReadFile.readFromFile(fileName);
+                    if (ListAllFiles.fileExist(fileName)) {
+                        lines = ReadFile.readFromFile(fileName);
+                    } else {
+                        System.out.println("File doesn't exist!");
+                        continue;
+                    }
                     CaesarCipher caesarCipher = new CaesarCipher(0, languageRules);
                     int shiftWanted = caesarCipher.bruteForce(lines, languageRules);
                     System.out.println("most probably shift is: " + shiftWanted);

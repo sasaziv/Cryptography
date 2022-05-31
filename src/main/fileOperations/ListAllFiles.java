@@ -1,6 +1,8 @@
 package main.fileOperations;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +18,11 @@ public class ListAllFiles {
                 System.out.println(file.getName());
             }
         }
+    }
+
+    public static boolean fileExist(String string) {
+        Path path = Path.of(PATHTOFILES + string);
+        return Files.exists(path);
     }
 
 }
