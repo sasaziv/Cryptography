@@ -13,14 +13,7 @@ public class EnglishLanguage implements LanguageRules {
         return characterList;
     }
 
-    @Override
-    public double testLanguageRules() {
-        return 0;
-    }
-
-
     // Getting the value of brute force for list
-
     public double bruteForce(List<String> list) {
         double result = 0;
         for (String string : list) {

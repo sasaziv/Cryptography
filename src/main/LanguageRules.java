@@ -6,9 +6,8 @@ public interface LanguageRules {
 
     List<Character> getAllCharacters();
 
-    double testLanguageRules();
-
     double bruteForce(String string);
+
     double bruteForce(List<String> string);
 
 }

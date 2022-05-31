@@ -4,7 +4,7 @@ import java.io.*;
 
 public class PrintFromFile {
     public static void printAll(String pathFile) {
-        pathFile = "files/" + pathFile;
+        pathFile = ListAllFiles.PATHTOFILES + pathFile;
         File f = new File(pathFile);
         System.out.println(f.getName() + " content:");
 

@@ -7,7 +7,7 @@ import java.util.List;
 public class WriteToFile {
 
     public static void writeAll(List<String> lines, String filePath) {
-        filePath = "files/" + filePath;
+        filePath = ListAllFiles.PATHTOFILES + filePath;
         try {
             Path path = Path.of(filePath);
             Files.write(path, lines);

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// CaesarCipher is a class for encryption/decryption where each letter is replaced by another letter.
+// when creating an object we have to enter the number of places for which the characters will rotate as well as which language is in question.
+
 public class CaesarCipher implements Encryption, Decryption {
 
     private int shift;
@@ -11,8 +14,6 @@ public class CaesarCipher implements Encryption, Decryption {
     LanguageRules languageRules;
 
     List<Character> characters;
-
-//    List<Character> characters = new LinkedList<>(List.of('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', ',', '.', '!', '?', ':', '-', '\"'));
 
     public CaesarCipher(int shift, LanguageRules languageRules) {
         this.shift = shift;
@@ -53,7 +54,7 @@ public class CaesarCipher implements Encryption, Decryption {
         return stringBuilder.toString();
     }
 
-    //    Shift every string in list by +"shift" in constructor
+    //    Shift every string in list by encode method
     public List<String> encodeFile(List<String> list) {
         List<String> encodedList = new ArrayList<>();
         for (String string : list) {
@@ -62,7 +63,7 @@ public class CaesarCipher implements Encryption, Decryption {
         return encodedList;
     }
 
-    //    Shift every string in list by -"shift" in constructor
+    //    Shift every string in list by decode method
     public List<String> decodeFile(List<String> list) {
         List<String> encodedList = new ArrayList<>();
         for (String string : list) {
@@ -71,38 +72,13 @@ public class CaesarCipher implements Encryption, Decryption {
         return encodedList;
     }
 
-    //Shift string by -parameter in method
-    public String decode(String string, int shift) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < string.length(); i++) {
-            char ch = string.charAt(i);
-            if (characters.contains(ch)) {
-                int originalPosition = characters.indexOf(ch);
-                int newPosition = (originalPosition - shift) % characters.size();
-                if (newPosition < 0) {
-                    newPosition = characters.size() + newPosition;
-                }
-                char newChar = characters.get(newPosition);
-                stringBuilder.append(newChar);
-            }
-        }
-        return stringBuilder.toString();
-    }
-
-    //Shift list of string by -parameter in method
-    public List<String> decodeFile(List<String> list, int i) {
-        List<String> encodedList = new ArrayList<>();
-        for (String string : list) {
-            encodedList.add(decode(string, i));
-        }
-        return encodedList;
-    }
 
     // Brute force fot getting most probably shift
-    public int bruteForce(List<String> listInput) {
+    public int bruteForce(List<String> listInput, LanguageRules languageRules) {
         ArrayList<Double> decryptionValue = new ArrayList<>();
         for (int i = 0; i < characters.size(); i++) {
-            List<String> list = decodeFile(listInput, i);
+            CaesarCipher caesarCipher = new CaesarCipher(i, languageRules);
+            List<String> list = caesarCipher.decodeFile(listInput);
             decryptionValue.add(i, languageRules.bruteForce(list));
         }
         double maxScore = decryptionValue.get(0);

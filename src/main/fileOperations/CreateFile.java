@@ -9,7 +9,7 @@ public class CreateFile {
             System.out.println("You didn't enter a name. Try again.");
         } else {
             try {
-                File myObj = new File("files/" + filePath);
+                File myObj = new File(ListAllFiles.PATHTOFILES + filePath);
                 if (myObj.createNewFile()) {
                     System.out.println("File created: " + myObj.getName() + ".");
                 } else {

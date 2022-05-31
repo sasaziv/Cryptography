@@ -11,7 +11,7 @@ public class ReadFile {
     private static List<String> list;
 
     public static List<String> readFromFile(String filePath) {
-        filePath = "files/" + filePath;
+        filePath = ListAllFiles.PATHTOFILES + filePath;
         try {
             list = Files.readAllLines(Paths.get(filePath));
         } catch (FileNotFoundException e) {

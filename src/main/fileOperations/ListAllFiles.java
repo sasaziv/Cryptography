@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAllFiles {
-    String pathToFiles = "files";
+    public static final String PATHTOFILES = "files/";
 
-    File[] files = new File(pathToFiles).listFiles();
+    File[] files = new File(PATHTOFILES).listFiles();
 
     public void printList() {
         System.out.println("File list:");
