@@ -1,0 +1,7 @@
+characters: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ,.!?:-"
+
+#mostCommonWordsInEnglish
+mostcommonwords: the,be,to,of,and, a , in , i , it ,that,have,for,not,on,with,he, as , you, do, at,this,but,his,by,from,they,we,say,her,she, or, an,will, my,one,all,would,there,their,what, so, up, us,out, if,about,who,get,which, go, me,when,make,can,like,time, no,just,him,know,take,people,into,year,your,good,some,could,them,see,other,than,then,now,look,only,its,over,think,also,back,after,use,two,how,our,work,first,well,way,even,new,want,because,any,these,give,day,most
+
+#Non-existent Character Strings (2 char) - from Quora https://www.quora.com/What-are-all-of-the-two-letter-combinations-that-never-occur-in-an-English-dictionary
+nonexistent: bx,cj,cv,cx,dx,fq,fx,gq,gx,hx,jc,jf,jg,jq,js,jv,jw,jx,jz,kq,kx,mx,px,pz,qb,qc,qd,qf,qg,qh,qj,qk,ql,qm,qn,qp,qs,qt,qv,qw,qx,qy,qz,sx,vb,vf,vh,vj,vm,vp,vq,vt,vw,vx,wx,xj,xx,xj,zq,zx
